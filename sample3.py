@@ -1,3 +1,6 @@
+# curl -fsSL https://ollama.com/install.sh | sh
+# ollama pull gemma3:1b
+#
 # pip install streamlit
 # streamlit run sample3.py --server.port 80 --server.address 0.0.0.0
 #
@@ -50,4 +53,5 @@ if prompt := st.chat_input("請輸入關於牌照稅的問題..."):
         response = llm.invoke(full_prompt)
         st.markdown(response.content)
         
+
     st.session_state.messages.append({"role": "assistant", "content": response.content})
