@@ -1,4 +1,7 @@
 #
+# curl -fsSL https://ollama.com/install.sh | sh
+# ollama pull gemma3:1b
+#
 # pip install langchain langchain-text-splitters langchain-huggingface
 # pip install sentence-transformers transformers torch
 # pip install langchain-chroma langchain-ollama
