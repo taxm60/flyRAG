@@ -5,7 +5,7 @@
 # pip install langchain langchain-text-splitters langchain-huggingface
 # pip install sentence-transformers transformers torch
 # pip install langchain-chroma langchain-ollama
-# ollama pull gemma3:1b
+# ollama pull gemma3:1b gemma3:4b
 #
 import os
 from langchain_text_splitters import MarkdownHeaderTextSplitter
@@ -40,8 +40,8 @@ vector_db = Chroma.from_documents(
 )
 print(f"已成功載入 {len(md_header_splits)} 個 Chunk 至資料庫。")
 
-# 4. 初始化 Ollama 的 Gemma 3 模型
-llm = ChatOllama(model="gemma3:1b")
+# 4. 初始化 Ollama 的 Gemma 3 模型； 這邊要用 gemma3:4b 回答的比較好！
+llm = ChatOllama(model="gemma3:4b")
 
 # 5. 定義 Prompt 模板
 template = """
